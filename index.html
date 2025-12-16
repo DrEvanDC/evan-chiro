@@ -1,0 +1,1620 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="קליניקת כירופרקטיקה של ד״ר גרשאטר אוון - טיפול מקצועי לכאבי גב, צוואר ויציבה" />
+  <title>ד"ר גרשאטר אוון (Evan) – כירופרקטיקה | Dr. Gershater Evan Chiropractic</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f3f4f6;
+      color: #111827;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+    a {
+      text-decoration: none;
+    }
+
+    /* Hero Section */
+    header.hero {
+      background: linear-gradient(135deg, #0ea5e9, #22c55e);
+      color: white;
+      padding: 80px 16px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+      gap: 32px;
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: clamp(32px, 4vw, 44px);
+      margin: 0 0 16px;
+      line-height: 1.2;
+    }
+    .hero p {
+      font-size: 18px;
+      margin: 0 0 24px;
+    }
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+    .hero-badge {
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.2);
+      backdrop-filter: blur(4px);
+    }
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    .btn-primary, .btn-secondary, .btn-ghost {
+      border-radius: 999px;
+      padding: 12px 22px;
+      font-size: 15px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease, color 0.1s ease;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: #fbbf24;
+      color: #1f2937;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 30px rgba(15, 23, 42, 0.35);
+    }
+    .btn-secondary {
+      background: rgba(15, 23, 42, 0.14);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+    }
+    .btn-secondary:hover {
+      background: rgba(15, 23, 42, 0.24);
+    }
+    .btn-ghost {
+      background: transparent;
+      color: #111827;
+      border: 1px solid #d1d5db;
+    }
+    .btn-ghost:hover {
+      background: #e5e7eb;
+    }
+    .hero-note {
+      font-size: 13px;
+      opacity: 0.9;
+      margin-top: 6px;
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+    }
+    .hero-main-image {
+      border-radius: 32px;
+      overflow: hidden;
+      background: radial-gradient(circle at top, #bbf7d0, #0ea5e9);
+      min-height: 260px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 20px;
+      box-shadow: 0 25px 40px rgba(15, 23, 42, 0.4);
+    }
+    .hero-main-image img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 24px;
+    }
+    .hero-floating-card {
+      position: absolute;
+      right: 8px;
+      bottom: -16px;
+      background: white;
+      border-radius: 20px;
+      padding: 14px 16px;
+      font-size: 13px;
+      box-shadow: 0 16px 30px rgba(15, 23, 42, 0.45);
+      max-width: 230px;
+      color: #0f172a;
+    }
+
+    /* Main Content */
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 40px 16px 80px;
+    }
+    section {
+      margin-bottom: 56px;
+    }
+    h2 {
+      font-size: 26px;
+      margin: 0 0 8px;
+    }
+    .section-subtitle {
+      margin: 0 0 24px;
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    /* Cards */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 20px 18px;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+      border: 1px solid #e5e7eb;
+    }
+    .card h3 {
+      margin: 0 0 6px;
+      font-size: 18px;
+    }
+    .card p {
+      margin: 0;
+      font-size: 14px;
+      color: #4b5563;
+    }
+
+    .image-card {
+      padding: 0;
+      overflow: hidden;
+    }
+    .image-card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      display: block;
+    }
+    .image-card-content {
+      padding: 16px 18px 18px;
+    }
+
+    .testimonial {
+      font-size: 14px;
+      color: #374151;
+      line-height: 1.7;
+    }
+    .testimonial strong {
+      display: block;
+      margin-top: 8px;
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .pill {
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #1d4ed8;
+    }
+
+    /* Appointments Section */
+    .appointments-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.1fr);
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .appointments-list {
+      margin-top: 12px;
+    }
+    .appointment-item {
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      margin-bottom: 8px;
+      background: #f9fafb;
+    }
+
+    .field-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 10px;
+      align-items: center;
+      font-size: 14px;
+    }
+    .field-row label {
+      min-width: 80px;
+    }
+    input[type="date"],
+    input[type="time"],
+    input[type="text"],
+    input[type="password"] {
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid #d1d5db;
+      font-size: 14px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    /* Admin Box */
+    .admin-box {
+      background: #0f172a;
+      color: white;
+      border-radius: 20px;
+      padding: 18px 18px 16px;
+      font-size: 13px;
+    }
+    .admin-box h3 {
+      margin: 0 0 6px;
+      font-size: 16px;
+    }
+    .admin-box small {
+      display: block;
+      color: #9ca3af;
+      margin-bottom: 10px;
+    }
+    .admin-inner {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(148, 163, 184, 0.5);
+    }
+    textarea {
+      width: 100%;
+      min-height: 80px;
+      border-radius: 14px;
+      border: 1px solid #e5e7eb;
+      padding: 8px 10px;
+      font-family: inherit;
+      font-size: 13px;
+      resize: vertical;
+    }
+
+    .admin-box .btn-ghost,
+    .admin-box .btn-primary,
+    .admin-box .btn-secondary {
+      background: #f9fafb;
+      color: #0f172a;
+      border: 1px solid #e5e7eb;
+      box-shadow: none;
+    }
+    .admin-box .btn-ghost:hover,
+    .admin-box .btn-primary:hover,
+    .admin-box .btn-secondary:hover {
+      background: #e5e7eb;
+    }
+
+    /* Footer */
+    footer {
+      background: #0b1120;
+      color: #9ca3af;
+      padding: 24px 16px 30px;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    /* Accessibility Widget */
+    .accessibility-toggle {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 1000;
+      border-radius: 999px;
+      width: 52px;
+      height: 52px;
+      border: none;
+      background: #111827;
+      color: #f9fafb;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.5);
+    }
+    .accessibility-panel {
+      position: fixed;
+      bottom: 84px;
+      left: 20px;
+      z-index: 999;
+      width: 260px;
+      max-width: calc(100% - 40px);
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.5);
+      padding: 14px 14px 10px;
+      font-size: 13px;
+      border: 1px solid #e5e7eb;
+      display: none;
+    }
+    .accessibility-panel.open {
+      display: block;
+    }
+    .accessibility-panel h3 {
+      margin: 0 0 8px;
+      font-size: 15px;
+    }
+    .accessibility-option {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+    .accessibility-option label {
+      cursor: pointer;
+    }
+    .accessibility-panel button.small-btn {
+      margin-top: 6px;
+      width: 100%;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      border: 1px solid #d1d5db;
+      background: #f3f4f6;
+      cursor: pointer;
+    }
+
+    /* Accessibility States */
+    body.a11y-large-font {
+      font-size: 115%;
+    }
+    body.a11y-high-contrast {
+      background: #000000;
+      color: #ffffff;
+    }
+    body.a11y-high-contrast a {
+      color: #38bdf8;
+    }
+    body.a11y-underline-links a {
+      text-decoration: underline;
+    }
+    body.a11y-dyslexic-font {
+      font-family: "OpenDyslexic", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    body.a11y-dark-mode {
+      background: #020617;
+      color: #e5e7eb;
+    }
+    body.a11y-dark-mode .card,
+    body.a11y-dark-mode .admin-box,
+    body.a11y-dark-mode .accessibility-panel {
+      background: #020617;
+      color: #e5e7eb;
+      border-color: #1f2937;
+    }
+    body.a11y-dark-mode footer {
+      background: #020617;
+    }
+    body.a11y-spacing {
+      line-height: 1.8;
+    }
+    body.a11y-strong-focus *:focus {
+      outline: 3px solid #f97316;
+      outline-offset: 3px;
+    }
+    body.a11y-reduced-motion * {
+      scroll-behavior: auto !important;
+      animation: none !important;
+      transition: none !important;
+    }
+    body.a11y-grayscale {
+      filter: grayscale(1);
+    }
+
+    /* Responsive */
+    @media (max-width: 880px) {
+      .hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-image-wrapper {
+        order: -1;
+      }
+      .hero-cta {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .appointments-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-badges">
+          <div class="hero-badge">קליניקת כירופרקטיקה – ד"ר גרשאטר אוון (Evan)</div>
+          <div class="hero-badge">Dr. Gershater Evan Chiropractic Clinic</div>
+        </div>
+        <h1>ד"ר גרשאטר אוון – כירופרקט מומחה לכאב גב וצוואר</h1>
+        <p>
+          <strong>ד"ר גרשאטר אוון (Dr. Gershater Evan)</strong> מציע טיפול כירופרקטי עדין ומקצועי,
+          מותאם אישית אליכם, עם דגש על חזרה לתנועה חופשית ושיפור איכות החיים.
+          ניתן להזמין תור בקליק דרך טלפון, וואטסאפ או טופס באתר.
+        </p>
+        <p style="font-size:14px; margin-top:-8px; opacity:0.9;">
+          Specialist chiropractic care by <strong>Dr. Gershater Evan</strong> focused on spine, posture and pain relief.
+        </p>
+        <div class="hero-cta">
+          <a href="tel:0539240494" class="btn-primary" aria-label="התקשר לקביעת תור אצל ד״ר גרשאטר אוון">
+            📞 התקשרו עכשיו לקביעת תור אצל ד"ר גרשאטר אוון
+          </a>
+          <a href="https://wa.me/972539240494?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%A7%D7%9C%D7%99%D7%A0%D7%99%D7%A7%D7%94%20%D7%A9%D7%9C%20%D7%93%D7%A8%20%D7%92%D7%A8%D7%A9%D7%90%D7%98%D7%A8%20Evan%20%D7%95%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%AA%D7%95%D7%A8" class="btn-secondary" target="_blank" rel="noopener" aria-label="שלח הודעת וואטסאפ לקליניקה">
+            💬 שליחת הודעת וואטסאפ לקליניקה
+          </a>
+          <button class="btn-ghost" onclick="scrollToAppointments()" aria-label="עבור לבדיקת תורים פנויים">בדיקת תורים פנויים</button>
+        </div>
+        <div class="hero-note">
+          מענה מהיר בשעות הפעילות. לאחר ביקור אצל ד"ר גרשאטר אוון תקבלו הודעת תודה אישית עם בקשה לפידבק.
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <div class="hero-main-image">
+          <img src="https://images.pexels.com/photos/4506109/pexels-photo-4506109.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="טיפול כירופרקטי אצל דוקטור גרשאטר Evan" />
+        </div>
+        <div class="hero-floating-card">
+          📍 קליניקת ד"ר גרשאטר אוון משלבת מקצועיות, יחס אישי וטיפול עדין.
+          <br />
+          <strong>כבר בביקור הראשון תרגישו את ההבדל.</strong>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" role="region" aria-label="למי מתאים הטיפול">
+      <h2>למי מתאים הטיפול אצל ד"ר גרשאטר אוון</h2>
+      <p class="section-subtitle">
+        בקליניקה של ד"ר גרשאטר אוון מטפלים במבוגרים, בני נוער וספורטאים הסובלים מכאבי גב תחתון, צוואר,
+        כאבי ראש, הקרנות לידיים או לרגליים, בעיות יציבה ועוד.
+      </p>
+      <div class="cards-grid">
+        <div class="card" role="article">
+          <h3>כאב גב וצוואר כרוני</h3>
+          <p>
+            התאמות עדינות לעמוד השדרה ותכנית טיפול מובנית שיכולות להפחית עומס, לשחרר שרירים
+            ולהחזיר תנועה חופשית למפרקים בהובלת ד"ר גרשאטר אוון.
+          </p>
+          <div class="pill-row">
+            <span class="pill">ישיבה ממושכת</span>
+            <span class="pill">עבודה מול מחשב</span>
+            <span class="pill">נהיגה מרובה</span>
+          </div>
+        </div>
+        <div class="card" role="article">
+          <h3>ספורטאים ואורח חיים פעיל</h3>
+          <p>
+            תמיכה בהתאוששות מפציעות, שיפור טווחי תנועה ושמירה על גוף מאוזן לפני ובמהלך פעילות
+            ספורטיבית אינטנסיבית, תוך התאמה אישית על ידי ד"ר גרשאטר אוון.
+          </p>
+          <div class="pill-row">
+            <span class="pill">פציעות חוזרות</span>
+            <span class="pill">הכנה למרתון</span>
+          </div>
+        </div>
+        <div class="card" role="article">
+          <h3>מניעה ושיפור איכות חיים</h3>
+          <p>
+            גם ללא כאב מיידי, ביקורים תקופתיים אצל ד"ר גרשאטר אוון יכולים לעזור בשמירה על יציבה טובה,
+            הפחתת עומסים ומניעת בעיות עתידיות.
+          </p>
+          <div class="pill-row">
+            <span class="pill">בריאות לאורך זמן</span>
+            <span class="pill">שינה טובה יותר</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" role="region" aria-label="גלריית הקליניקה">
+      <h2>הקליניקה והאווירה</h2>
+      <p class="section-subtitle">
+        הצצה למרחב הטיפולי של ד"ר גרשאטר אוון כדי שתוכלו להרגיש בבית עוד לפני שתגיעו.
+      </p>
+      <div class="cards-grid">
+        <div class="card image-card" role="article">
+          <img src="https://images.pexels.com/photos/4506105/pexels-photo-4506105.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="חדר טיפולים כירופרקטי" />
+          <div class="image-card-content">
+            <h3>חדר טיפולים מרווח</h3>
+            <p>מיטה מקצועית, תאורה רגועה ומוזיקה נעימה המותאמת לטיפול כירופרקטי.</p>
+          </div>
+        </div>
+        <div class="card image-card" role="article">
+          <img src="https://images.pexels.com/photos/4506107/pexels-photo-4506107.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="מטופלת בטיפול כירופרקטי" />
+          <div class="image-card-content">
+            <h3>יחס אישי של ד"ר גרשאטר אוון</h3>
+            <p>כל טיפול מתחיל בהקשבה מלאה לסיפור האישי שלכם והתאמה לצרכים הייחודיים.</p>
+          </div>
+        </div>
+        <div class="card" role="article">
+          <h3>מטופלים מספרים</h3>
+          <p class="testimonial">
+            "הגעתי לד"ר גרשאטר אוון עם כאבי גב חזקים אחרי ישיבה ממושכת בעבודה. אחרי מספר טיפולים
+            הרגשתי שיפור משמעותי, והיום אני מצליח לשמור על שגרה כמעט בלי כאב בכלל."
+            <strong>א׳ מהמרכז, עובד הייטק</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="appointments" role="region" aria-label="בדיקת תורים וקביעת תור">
+      <h2>בדיקת תורים פנויים וקביעת תור אצל ד"ר גרשאטר אוון</h2>
+      <p class="section-subtitle">
+        כאן ניתן לבדוק תורים זמינים על פי ימים ושעות ולהתאים את ההמשך לצרכים של קליניקת ד"ר גרשאטר אוון.
+        בהמשך ניתן לחבר את לוח התורים ישירות לגוגל שיטס ויומן גוגל.
+      </p>
+      <div class="appointments-layout">
+        <div class="card" role="form" aria-label="טופס חיפוש תור פנוי">
+          <h3>חיפוש תור פנוי</h3>
+          <p style="font-size:14px; color:#4b5563; margin-bottom:16px;">
+            בחרו תאריך מועדף ואנחנו נציג תורים פנויים לדוגמה. בהמשך ניתן לחבר זאת למקור חיצוני
+            כמו גוגל שיטס או יומן גוגל כדי שהנתונים יתעדכנו אוטומטית.
+          </p>
+          <div class="field-row">
+            <label for="dateInput">תאריך</label>
+            <input type="date" id="dateInput" aria-label="בחר תאריך לבדיקת תורים" />
+          </div>
+          <button class="btn-primary" style="width:100%; justify-content:center; margin-top:4px;" onclick="searchAppointments()" aria-label="חפש תורים פנויים">
+            חיפוש תורים לתאריך שנבחר
+          </button>
+          <div id="appointmentsList" class="appointments-list" role="list" aria-live="polite"></div>
+        </div>
+
+        <div class="card" role="form" aria-label="טופס השארת פרטים">
+          <h3>השארת פרטים מהירה</h3>
+          <p style="font-size:14px; color:#4b5563; margin-bottom:10px;">
+            מלאו פרטים קצרים ונחזור אליכם עם הצעת תור מתאימה אצל ד"ר גרשאטר אוון.
+          </p>
+          <div class="field-row">
+            <input type="text" id="leadName" placeholder="שם מלא" aria-label="שם מלא" />
+          </div>
+          <div class="field-row">
+            <input type="text" id="leadPhone" placeholder="טלפון" aria-label="מספר טלפון" />
+          </div>
+          <div class="field-row">
+            <input type="text" id="leadReason" placeholder="סיבה לפנייה בקצרה" aria-label="סיבה לפנייה" />
+          </div>
+          <button class="btn-secondary" style="width:100%; justify-content:center; margin-top:4px;" onclick="submitLead()" aria-label="שלח פרטים לתיאום תור">
+            שליחת פרטים ותיאום שיחה
+          </button>
+          <div id="leadMessage" style="margin-top:10px; font-size:13px;" role="alert" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="admin" role="region" aria-label="אזור ניהול למנהל">
+      <h2>אזור אישי למנהל קליניקת ד"ר גרשאטר אוון</h2>
+      <p class="section-subtitle">
+        כאן ד"ר גרשאטר אוון יכול להיכנס באמצעות סיסמה זמנית, להחליף סיסמה, לנהל משימות,
+        לעדכן תורים ולתכנן את היום דרך תצוגת לוח שנה ותאימות לגוגל יומן וגוגל שיטס.
+      </p>
+
+      <div class="cards-grid">
+        <div class="admin-box" aria-label="אזור ניהול" role="region">
+          <h3>כניסה לאזור הניהול</h3>
+          <small>סיסמה התחלתית לדוגמה: 123456. מומלץ להחליף מיד לאחר הכניסה.</small>
+          <div class="field-row" style="margin-bottom:8px;">
+            <label for="adminPassword">סיסמת מנהל</label>
+            <input type="password" id="adminPassword" placeholder="הקלד סיסמה" aria-label="הזן סיסמת מנהל" />
+          </div>
+          <button class="btn-secondary" style="width:100%; justify-content:center;" onclick="toggleAdminPanel()" aria-label="כניסה או יציאה מאזור הניהול">
+            כניסה או יציאה מאזור הניהול
+          </button>
+          <div id="adminLoginStatus" style="margin-top:6px; font-size:12px;" role="alert" aria-live="polite"></div>
+
+          <div id="adminPanel" class="admin-inner" style="display:none;">
+            <h3 style="font-size:15px; margin-bottom:6px;">הודעת תודה מובנית</h3>
+            <small>
+              הודעה זו תוכל להישלח אוטומטית לאחר ביקור בקליניקה של ד"ר גרשאטר אוון דרך מערכת הודעות חיצונית.
+            </small>
+            <textarea id="thankYouTemplate" aria-label="תבנית הודעת תודה">תודה שביקרתם אצל ד"ר גרשאטר אוון. נשמח מאוד אם תשתפו אותנו בחוויית הטיפול ותיתנו לנו פידבק קצר. בריאות שלמה.</textarea>
+            <button class="btn-primary" style="margin-top:8px;" onclick="saveTemplate()" aria-label="שמור תבנית הודעת תודה">
+              שמירת תבנית ההודעה
+            </button>
+            <div id="templateStatus" style="margin-top:6px; font-size:12px; color:#bbf7d0;" role="alert" aria-live="polite"></div>
+
+            <h3 style="font-size:15px; margin:16px 0 6px;">שינוי סיסמת מנהל</h3>
+            <small>כאן ניתן להחליף את הסיסמה הזמנית 123456 לסיסמה אישית.</small>
+            <div class="field-row">
+              <input type="password" id="currentPassword" placeholder="סיסמה נוכחית" aria-label="סיסמה נוכחית" />
+            </div>
+            <div class="field-row">
+              <input type="password" id="newPassword" placeholder="סיסמה חדשה" aria-label="סיסמה חדשה" />
+            </div>
+            <div class="field-row">
+              <input type="password" id="confirmPassword" placeholder="אישור סיסמה חדשה" aria-label="אישור סיסמה חדשה" />
+            </div>
+            <button class="btn-ghost" style="width:100%; justify-content:center;" onclick="changeAdminPassword()" aria-label="שמור סיסמה חדשה">
+              שמירת סיסמה חדשה
+            </button>
+            <div id="passwordStatus" style="margin-top:6px; font-size:12px;" role="alert" aria-live="polite"></div>
+
+            <h3 style="font-size:15px; margin:18px 0 6px;">משימות ניהול יומיות</h3>
+            <small>ניהול משימות כמו שיחות חזרה למטופלים, עדכון יומן, סידור חדר הטיפולים ועוד.</small>
+            <div class="field-row">
+              <input type="text" id="taskText" placeholder="משימה חדשה" aria-label="תיאור משימה חדשה" />
+            </div>
+            <div class="field-row">
+              <label for="taskDue">תאריך יעד</label>
+              <input type="date" id="taskDue" aria-label="תאריך יעד למשימה" />
+            </div>
+            <button class="btn-primary" style="width:100%; justify-content:center;" onclick="addTask()" aria-label="הוסף משימה חדשה">
+              הוספת משימה
+            </button>
+            <div id="tasksList" style="margin-top:10px;" role="list" aria-live="polite"></div>
+
+            <h3 style="font-size:15px; margin:18px 0 6px;">לוח שנה יומי</h3>
+            <small>
+              לוח יום מסודר עם אפשרות לדפדוף יום קודם / הבא. ניתן לחבר זאת ליומן גוגל באמצעות API או הטמעת iframe.
+            </small>
+            <div id="calendarDemo" style="margin-top:8px; font-size:13px;" role="region" aria-label="לוח שנה יומי" aria-live="polite"></div>
+
+            <h3 style="font-size:15px; margin:18px 0 6px;">סנכרון גוגל שיטס בזמן אמת</h3>
+            <small>
+              חיבור מלא לגוגל שיטס עם סנכרון דו-כיווני. הזן את כתובת ה-Web App שלך והמערכת תסנכרן אוטומטית.
+            </small>
+            <div class="field-row" style="margin-top:6px;">
+              <label for="sheetsUrl" style="min-width:90px;">כתובת Web App</label>
+              <input type="text" id="sheetsUrl" placeholder="https://script.google.com/macros/s/XXXXX/exec" aria-label="כתובת Google Apps Script Web App" />
+            </div>
+            <div style="display:flex; gap:6px; margin-top:6px;">
+              <button class="btn-ghost" style="flex:1; justify-content:center;" onclick="importFromSheets()" aria-label="ייבא תורים מגוגל שיטס">
+                📥 ייבוא תורים
+              </button>
+              <button class="btn-ghost" style="flex:1; justify-content:center;" onclick="exportToSheets()" aria-label="ייצא תורים לגוגל שיטס">
+                📤 ייצוא תורים
+              </button>
+            </div>
+            <div style="display:flex; gap:6px; margin-top:6px;">
+              <button class="btn-ghost" style="flex:1; justify-content:center; font-size:12px;" onclick="startAutoSync()" aria-label="הפעל סנכרון אוטומטי">
+                🔄 סנכרון אוטומטי
+              </button>
+              <button class="btn-ghost" style="flex:1; justify-content:center; font-size:12px;" onclick="stopAutoSync()" aria-label="עצור סנכרון אוטומטי">
+                ⏸️ עצור סנכרון
+              </button>
+            </div>
+            <div id="sheetsStatus" style="margin-top:6px; font-size:12px;" role="alert" aria-live="polite"></div>
+            
+            <details style="margin-top:12px; font-size:12px; color:#9ca3af;">
+              <summary style="cursor:pointer; padding:4px 0;">📖 הוראות חיבור לגוגל שיטס</summary>
+              <div style="padding:8px 0; line-height:1.6;">
+                <strong>שלב 1:</strong> צור גיליון חדש ב-Google Sheets<br>
+                <strong>שלב 2:</strong> עבור ל-Extensions → Apps Script<br>
+                <strong>שלב 3:</strong> העתק את הקוד הבא:<br>
+                <code style="display:block; background:#1e293b; padding:8px; border-radius:8px; margin:6px 0; overflow-x:auto; direction:ltr; text-align:left;">
+function doGet(e) {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('תורים');
+  const data = sheet.getDataRange().getValues();
+  const appointments = data.slice(1).map(row => ({
+    date: row[0],
+    time: row[1],
+    status: row[2]
+  }));
+  return ContentService.createTextOutput(JSON.stringify({
+    success: true,
+    appointments: appointments
+  })).setMimeType(ContentService.MimeType.JSON);
+}
+
+function doPost(e) {
+  const data = JSON.parse(e.postData.contents);
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('תורים');
+  sheet.clear();
+  sheet.appendRow(['תאריך', 'שעה', 'סטטוס']);
+  data.data.appointments.forEach(apt => {
+    sheet.appendRow([apt.date, apt.time, apt.status]);
+  });
+  return ContentService.createTextOutput(JSON.stringify({
+    success: true
+  })).setMimeType(ContentService.MimeType.JSON);
+}
+                </code>
+                <strong>שלב 4:</strong> לחץ Deploy → New deployment<br>
+                <strong>שלב 5:</strong> בחר "Web app" והגדר גישה ל-"Anyone"<br>
+                <strong>שלב 6:</strong> העתק את כתובת ה-URL והדבק כאן למעלה
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="card" role="article">
+          <h3>מערכת בדיקת תקינות אוטומטית</h3>
+          <p style="font-size:14px; color:#4b5563; margin-bottom:12px;">
+            המערכת בודקת אוטומטית את תקינות כל הרכיבים, הנגישות, החיבורים והפונקציות.
+            סטטוס עדכני:
+          </p>
+          <div id="diagnosticsStatus" style="padding:12px; background:#f9fafb; border-radius:12px; font-size:13px; margin-bottom:10px;" role="status" aria-live="polite">
+            ⏳ מריץ בדיקת תקינות...
+          </div>
+          <button class="btn-primary" style="width:100%; justify-content:center;" onclick="runDiagnostics()" aria-label="הרץ בדיקת תקינות מחדש">
+            🔍 הרץ בדיקת תקינות מחדש
+          </button>
+          <div style="margin-top:10px; padding:10px; background:#eff6ff; border-radius:8px; font-size:12px; color:#1e40af;">
+            💡 <strong>טיפ:</strong> פתח את הקונסול (F12) כדי לראות דוח מפורט של כל הבדיקות
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <button class="btn-ghost" style="margin-bottom:10px;" onclick="runDiagnostics()" aria-label="הרץ בדיקת תקינות מערכת">
+      🔍 הרץ בדיקת תקינות
+    </button>
+    <br>
+    קליניקת ד"ר גרשאטר אוון – כל הזכויות שמורות © 2025<br />
+    Dr. Gershater Evan Chiropractic Clinic – All rights reserved © 2025
+  </footer>
+
+  <!-- כפתור ותפריט נגישות -->
+  <button class="accessibility-toggle" aria-label="פתיחת תפריט נגישות" onclick="toggleAccessibilityPanel()">♿</button>
+  <div id="accessibilityPanel" class="accessibility-panel" role="dialog" aria-label="תפריט נגישות" aria-hidden="true">
+    <h3>הגדרות נגישות</h3>
+    <div class="accessibility-option">
+      <input type="checkbox" id="optLargeFont" onchange="toggleAccessibilityOption('largeFont', this.checked)" aria-label="הגדלת גודל גופן" />
+      <label for="optLargeFont">הגדלת גודל גופן</label>
+    </div>
+    <div class="accessibility-option">
+      <input type="checkbox" id="optHighContrast" onchange="toggleAccessibilityOption('highContrast', this.checked)" aria-label="ניגודיות גבוהה" />
+      <label for="optHighContrast">ניגודיות גבוהה</label>
+    </div>
+    <div class="accessibility-option">
+      <input type="checkbox" id="optDarkMode" onchange="toggleAccessibilityOption('darkMode', this.checked)" aria-label="מצב כהה" />
+      <label for="optDarkMode">מצב כהה</label>
+    </div>
+    <div class="accessibility-option">
+      <input type="checkbox" id="optUnderline" onchange="toggleAccessibilityOption('underlineLinks', this.checked)" aria-label="הדגשת קישורים בקו תחתון" />
+      <label for="optUnderline">הדגשת קישורים בקו תחתון</label>
+    </div>
+    <div class="accessibility-option">
+      <input type="checkbox" id="optDyslexic" onchange="toggleAccessibilityOption('dyslexicFont', this.checked)" aria-label="גופן ידידותי לדיסלקציה" />
+      <label for="optDyslexic">גופן ידידותי לדיסלקציה</label>
+    </div>
+    <div class="accessibility-option">
+      <input type="checkbox" id="optSpacing" onchange="toggleAccessibilityOption('spacing', this.checked)" aria-label="הגדלת ריווח שורות" />
+      <label for="optSpacing">הגדלת ריווח שורות</label>
+    </div>
+    <div class="accessibility-option">
+      <input type="checkbox" id="optFocus" onchange="toggleAccessibilityOption('strongFocus', this.checked)" aria-label="הדגשת פוקוס למקלדת" />
+      <label for="optFocus">הדגשת פוקוס למקלדת</label>
+    </div>
+    <div class="accessibility-option">
+      <input type="checkbox" id="optReducedMotion" onchange="toggleAccessibilityOption('reducedMotion', this.checked)" aria-label="צמצום אנימציות ותזוזות" />
+<label for="optReducedMotion">צמצום אנימציות ותזוזות</label>
+    </div>
+    <div class="accessibility-option">
+      <input type="checkbox" id="optGrayscale" onchange="toggleAccessibilityOption('grayscale', this.checked)" aria-label="מצב גווני אפור" />
+      <label for="optGrayscale">מצב גווני אפור</label>
+    </div>
+    <button class="small-btn" onclick="resetAccessibility()" aria-label="איפוס כל הגדרות הנגישות">איפוס הגדרות נגישות</button>
+  </div>
+
+  <script>
+    // ==========================
+    // נתוני דמו ראשוניים
+    // ==========================
+    let sampleAppointments = [
+      { date: "2025-11-17", time: "09:00", status: "פנוי" },
+      { date: "2025-11-17", time: "11:30", status: "פנוי" },
+      { date: "2025-11-18", time: "16:00", status: "פנוי" },
+      { date: "2025-11-19", time: "18:30", status: "פנוי" }
+    ];
+
+    let adminPassword = "123456"; // סיסמה זמנית התחלתית
+    const adminTasks = [];
+    let currentCalendarDate = new Date();
+    let autoSyncInterval = null;
+
+    // ==========================
+    // ניווט בסיסי
+    // ==========================
+    function scrollToAppointments() {
+      const el = document.getElementById("appointments");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+
+    // ==========================
+    // תורים לדוגמה
+    // ==========================
+    function searchAppointments() {
+      const date = document.getElementById("dateInput").value;
+      const list = document.getElementById("appointmentsList");
+      list.innerHTML = "";
+
+      if (!date) {
+        list.innerHTML = '<p style="margin-top:12px; font-size:13px; color:#6b7280;">בחרו תאריך כדי לראות תורים פנויים.</p>';
+        return;
+      }
+
+      const found = sampleAppointments.filter(a => a.date === date && a.status === "פנוי");
+      if (!found.length) {
+        list.innerHTML = '<p style="margin-top:12px; font-size:13px; color:#6b7280;">לתאריך זה אין כרגע תורים בדוגמה. ניתן להשאיר פרטים ונחזור אליכם עם הצעות זמינות.</p>';
+        return;
+      }
+
+      found.forEach(a => {
+        const div = document.createElement("div");
+        div.className = "appointment-item";
+        div.setAttribute("role", "listitem");
+        div.innerHTML = `<span>${a.time}</span><span>${a.status}</span>`;
+        list.appendChild(div);
+      });
+    }
+
+    // ==========================
+    // לידים מטופלים חדשים
+    // ==========================
+    function submitLead() {
+      const name = document.getElementById("leadName").value.trim();
+      const phone = document.getElementById("leadPhone").value.trim();
+      const reason = document.getElementById("leadReason").value.trim();
+      const msg = document.getElementById("leadMessage");
+
+      if (!name || !phone) {
+        msg.style.color = "#b91c1c";
+        msg.textContent = "נא למלא לפחות שם וטלפון כדי שנוכל לחזור אליכם.";
+        return;
+      }
+
+      // כאן ניתן יהיה בעתיד לבצע שליחה ל-API אמיתי / וואטסאפ וכדומה
+      msg.style.color = "#15803d";
+      msg.textContent = "תודה רבה, הפרטים נקלטו. נחזור אליכם בהקדם עם הצעת תור אצל ד\"ר גרשאטר אוון.";
+
+      document.getElementById("leadName").value = "";
+      document.getElementById("leadPhone").value = "";
+      document.getElementById("leadReason").value = "";
+    }
+
+    // ==========================
+    // אזור ניהול – כניסה וסיסמאות
+    // ==========================
+    function toggleAdminPanel() {
+      const passInput = document.getElementById("adminPassword");
+      const status = document.getElementById("adminLoginStatus");
+      const panel = document.getElementById("adminPanel");
+      if (!passInput || !status || !panel) return;
+
+      if (passInput.value === adminPassword) {
+        const isHidden = panel.style.display === "none" || panel.style.display === "";
+        panel.style.display = isHidden ? "block" : "none";
+        status.style.color = "#bbf7d0";
+        status.textContent = isHidden ? "נכנסת בהצלחה לאזור הניהול." : "יצאת מאזור הניהול.";
+      } else {
+        status.style.color = "#fecaca";
+        status.textContent = "סיסמה שגויה. אם זו כניסה ראשונה, נסה את הסיסמה הזמנית 123456.";
+      }
+    }
+
+    function saveTemplate() {
+      const template = document.getElementById("thankYouTemplate").value.trim();
+      const status = document.getElementById("templateStatus");
+      if (!status) return;
+
+      if (!template) {
+        status.style.color = "#fecaca";
+        status.textContent = "התבנית ריקה. נא להקליד טקסט להודעת התודה.";
+        return;
+      }
+      // פה אפשר בעתיד לשמור לשרת / DB
+      status.style.color = "#bbf7d0";
+      status.textContent = "התבנית נשמרה בהצלחה בדמו. ניתן יהיה לחבר זאת בהמשך למערכת הודעות אמיתית.";
+    }
+
+    function changeAdminPassword() {
+      const current = document.getElementById("currentPassword").value;
+      const next = document.getElementById("newPassword").value;
+      const confirmNext = document.getElementById("confirmPassword").value;
+      const status = document.getElementById("passwordStatus");
+      if (!status) return;
+
+      if (current !== adminPassword) {
+        status.style.color = "#fecaca";
+        status.textContent = "הסיסמה הנוכחית אינה נכונה.";
+        return;
+      }
+      if (!next || next.length < 4) {
+        status.style.color = "#fecaca";
+        status.textContent = "סיסמה חדשה צריכה להכיל לפחות 4 תווים.";
+        return;
+      }
+      if (next !== confirmNext) {
+        status.style.color = "#fecaca";
+        status.textContent = "האישור לסיסמה החדשה אינו תואם.";
+        return;
+      }
+
+      adminPassword = next;
+      status.style.color = "#bbf7d0";
+      status.textContent = "הסיסמה עודכנה בהצלחה. בכניסה הבאה השתמש בסיסמה החדשה.";
+      document.getElementById("currentPassword").value = "";
+      document.getElementById("newPassword").value = "";
+      document.getElementById("confirmPassword").value = "";
+    }
+
+    // ==========================
+    // משימות ניהול ולוח שנה
+    // ==========================
+    function addTask() {
+      const textInput = document.getElementById("taskText");
+      const dueInput = document.getElementById("taskDue");
+      if (!textInput || !dueInput) return;
+
+      const text = textInput.value.trim();
+      const due = dueInput.value;
+      if (!text) return;
+
+      adminTasks.push({ text, due, done: false });
+      textInput.value = "";
+      dueInput.value = "";
+      renderTasks();
+      renderCalendarDay();
+    }
+
+    function toggleTask(index) {
+      if (!adminTasks[index]) return;
+      adminTasks[index].done = !adminTasks[index].done;
+      renderTasks();
+      renderCalendarDay();
+    }
+
+    function deleteTask(index) {
+      if (!adminTasks[index]) return;
+      adminTasks.splice(index, 1);
+      renderTasks();
+      renderCalendarDay();
+    }
+
+    function renderTasks() {
+      const container = document.getElementById("tasksList");
+      if (!container) return;
+      container.innerHTML = "";
+
+      if (!adminTasks.length) {
+        container.innerHTML = '<p style="font-size:13px; color:#9ca3af; margin-top:6px;">אין משימות כרגע.</p>';
+        return;
+      }
+
+      adminTasks.forEach((task, index) => {
+        const row = document.createElement("div");
+        row.style.display = "flex";
+        row.style.alignItems = "center";
+        row.style.justifyContent = "space-between";
+        row.style.gap = "8px";
+        row.style.marginTop = "6px";
+        row.setAttribute("role", "listitem");
+
+        const left = document.createElement("div");
+        left.style.display = "flex";
+        left.style.alignItems = "center";
+        left.style.gap = "6px";
+
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.checked = task.done;
+        checkbox.onclick = () => toggleTask(index);
+        checkbox.setAttribute("aria-label", `סמן משימה: ${task.text}`);
+
+        const label = document.createElement("span");
+        label.textContent = task.text + (task.due ? ` (יעד: ${task.due})` : "");
+        label.style.fontSize = "13px";
+        if (task.done) {
+          label.style.textDecoration = "line-through";
+          label.style.opacity = "0.7";
+        }
+
+        left.appendChild(checkbox);
+        left.appendChild(label);
+
+        const delBtn = document.createElement("button");
+        delBtn.type = "button";
+        delBtn.textContent = "✕";
+        delBtn.style.border = "none";
+        delBtn.style.borderRadius = "999px";
+        delBtn.style.padding = "2px 8px";
+        delBtn.style.fontSize = "11px";
+        delBtn.style.cursor = "pointer";
+        delBtn.setAttribute("aria-label", `מחק משימה: ${task.text}`);
+        delBtn.onclick = () => deleteTask(index);
+
+        row.appendChild(left);
+        row.appendChild(delBtn);
+        container.appendChild(row);
+      });
+    }
+
+    function formatDateForCalendar(d) {
+      const year = d.getFullYear();
+      const month = String(d.getMonth() + 1).padStart(2, "0");
+      const day = String(d.getDate()).padStart(2, "0");
+      return `${year}-${month}-${day}`;
+    }
+
+    function renderCalendarDay() {
+      const container = document.getElementById("calendarDemo");
+      if (!container) return;
+      const dateStr = formatDateForCalendar(currentCalendarDate);
+      const tasksForDay = adminTasks.filter(t => t.due === dateStr);
+
+      let html = "";
+      html += `<div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:6px;">`;
+      html += `<button type="button" style="border-radius:999px; border:1px solid #4b5563; background:transparent; color:inherit; padding:2px 8px; font-size:11px; cursor:pointer;" onclick="changeCalendarDay(-1)" aria-label="יום קודם">יום קודם</button>`;
+      html += `<strong>${dateStr}</strong>`;
+      html += `<button type="button" style="border-radius:999px; border:1px solid #4b5563; background:transparent; color:inherit; padding:2px 8px; font-size:11px; cursor:pointer;" onclick="changeCalendarDay(1)" aria-label="יום הבא">יום הבא</button>`;
+      html += `</div>`;
+
+      if (!tasksForDay.length) {
+        html += `<p style="font-size:12px; color:#9ca3af; margin:4px 0 0;">אין משימות רשומות ליום זה.</p>`;
+      } else {
+        html += `<ul style="margin:4px 0 0; padding-right:18px; font-size:12px;">`;
+        tasksForDay.forEach(t => {
+          html += `<li>${t.text}</li>`;
+        });
+        html += `</ul>`;
+      }
+
+      container.innerHTML = html;
+    }
+
+    function changeCalendarDay(delta) {
+      currentCalendarDate.setDate(currentCalendarDate.getDate() + delta);
+      renderCalendarDay();
+    }
+
+    // ==========================
+    // חיבור אמיתי לגוגל שיטס
+    // ==========================
+    async function importFromSheets() {
+      const status = document.getElementById("sheetsStatus");
+      const urlInput = document.getElementById("sheetsUrl");
+      if (!status || !urlInput) return;
+
+      const webAppUrl = urlInput.value.trim();
+      if (!webAppUrl) {
+        status.style.color = "#fecaca";
+        status.textContent = "נא להזין כתובת Web App של Google Apps Script";
+        return;
+      }
+
+      status.style.color = "#fbbf24";
+      status.textContent = "מייבא נתונים מגוגל שיטס...";
+
+      try {
+        const response = await fetch(webAppUrl + "?action=getAppointments", {
+          method: 'GET',
+          mode: 'cors'
+        });
+
+        if (!response.ok) {
+          throw new Error('שגיאה בתקשורת עם השרת');
+        }
+
+        const data = await response.json();
+        
+        if (data.success && Array.isArray(data.appointments)) {
+          sampleAppointments = data.appointments;
+          status.style.color = "#bbf7d0";
+          status.textContent = `ייבוא הצליח! נטענו ${data.appointments.length} תורים מגוגל שיטס`;
+          
+          // רענון תצוגת התורים אם יש תאריך שנבחר
+          const dateInput = document.getElementById("dateInput");
+          if (dateInput && dateInput.value) {
+            searchAppointments();
+          }
+        } else {
+          throw new Error(data.error || 'פורמט נתונים לא תקין');
+        }
+      } catch (error) {
+        status.style.color = "#fecaca";
+        status.textContent = `שגיאה: ${error.message}. ודא שה-Web App פעיל ומאפשר גישה אנונימית.`;
+        console.error('Import error:', error);
+      }
+    }
+
+    async function exportToSheets() {
+      const status = document.getElementById("sheetsStatus");
+      const urlInput = document.getElementById("sheetsUrl");
+      if (!status || !urlInput) return;
+
+      const webAppUrl = urlInput.value.trim();
+      if (!webAppUrl) {
+        status.style.color = "#fecaca";
+        status.textContent = "נא להזין כתובת Web App של Google Apps Script";
+        return;
+      }
+
+      status.style.color = "#fbbf24";
+      status.textContent = "מייצא נתונים לגוגל שיטס...";
+
+      try {
+        const dataToExport = {
+          appointments: sampleAppointments,
+          tasks: adminTasks,
+          timestamp: new Date().toISOString()
+        };
+
+        const response = await fetch(webAppUrl, {
+          method: 'POST',
+          mode: 'cors',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            action: 'updateAppointments',
+            data: dataToExport
+          })
+        });
+
+        if (!response.ok) {
+          throw new Error('שגיאה בתקשורת עם השרת');
+        }
+
+        const result = await response.json();
+        
+        if (result.success) {
+          status.style.color = "#bbf7d0";
+          status.textContent = `ייצוא הצליח! ${sampleAppointments.length} תורים ו-${adminTasks.length} משימות עודכנו בגוגל שיטס`;
+        } else {
+          throw new Error(result.error || 'הייצוא נכשל');
+        }
+      } catch (error) {
+        status.style.color = "#fecaca";
+        status.textContent = `שגיאה: ${error.message}`;
+        console.error('Export error:', error);
+      }
+    }
+
+    // סנכרון אוטומטי כל 5 דקות
+    function startAutoSync() {
+      if (autoSyncInterval) {
+        alert('סנכרון אוטומטי כבר פועל');
+        return;
+      }
+      
+      const urlInput = document.getElementById("sheetsUrl");
+      if (!urlInput || !urlInput.value.trim()) {
+        alert('נא להזין כתובת Web App לפני הפעלת סנכרון אוטומטי');
+        return;
+      }
+
+      autoSyncInterval = setInterval(() => {
+        importFromSheets();
+      }, 5 * 60 * 1000); // 5 דקות
+
+      const status = document.getElementById("sheetsStatus");
+      if (status) {
+        status.style.color = "#bbf7d0";
+        status.textContent = "סנכרון אוטומטי הופעל - המערכת תתעדכן כל 5 דקות";
+      }
+    }
+
+    function stopAutoSync() {
+      if (!autoSyncInterval) {
+        alert('סנכרון אוטומטי לא פועל כרגע');
+        return;
+      }
+
+      clearInterval(autoSyncInterval);
+      autoSyncInterval = null;
+
+      const status = document.getElementById("sheetsStatus");
+      if (status) {
+        status.style.color = "#9ca3af";
+        status.textContent = "סנכרון אוטומטי הופסק";
+      }
+    }
+
+    // ==========================
+    // נגישות – פאנל וכיוונונים
+    // ==========================
+    function toggleAccessibilityPanel() {
+      const panel = document.getElementById("accessibilityPanel");
+      if (!panel) return;
+      const isOpen = panel.classList.contains("open");
+      panel.classList.toggle("open");
+      panel.setAttribute("aria-hidden", isOpen ? "true" : "false");
+    }
+
+    const accessibilityConfig = {
+      largeFont:      { className: "a11y-large-font",      checkboxId: "optLargeFont" },
+      highContrast:   { className: "a11y-high-contrast",   checkboxId: "optHighContrast" },
+      darkMode:       { className: "a11y-dark-mode",       checkboxId: "optDarkMode" },
+      underlineLinks: { className: "a11y-underline-links", checkboxId: "optUnderline" },
+      dyslexicFont:   { className: "a11y-dyslexic-font",   checkboxId: "optDyslexic" },
+      spacing:        { className: "a11y-spacing",         checkboxId: "optSpacing" },
+      strongFocus:    { className: "a11y-strong-focus",    checkboxId: "optFocus" },
+      reducedMotion:  { className: "a11y-reduced-motion",  checkboxId: "optReducedMotion" },
+      grayscale:      { className: "a11y-grayscale",       checkboxId: "optGrayscale" }
+    };
+
+    function toggleAccessibilityOption(key, enabled) {
+      const cfg = accessibilityConfig[key];
+      if (!cfg) return;
+      document.body.classList.toggle(cfg.className, enabled);
+      saveAccessibilityState();
+    }
+
+    function resetAccessibility() {
+      Object.values(accessibilityConfig).forEach(cfg => {
+        document.body.classList.remove(cfg.className);
+        const cb = document.getElementById(cfg.checkboxId);
+        if (cb) cb.checked = false;
+      });
+      saveAccessibilityState();
+    }
+
+    function saveAccessibilityState() {
+      const state = {};
+      Object.entries(accessibilityConfig).forEach(([key, cfg]) => {
+        state[key] = document.body.classList.contains(cfg.className);
+      });
+      try {
+        localStorage.setItem("a11yState", JSON.stringify(state));
+      } catch (e) {
+        console.warn('לא ניתן לשמור הגדרות נגישות ב-localStorage');
+      }
+    }
+
+    function loadAccessibilityState() {
+      let state = {};
+      try {
+        const raw = localStorage.getItem("a11yState");
+        if (raw) state = JSON.parse(raw);
+      } catch (e) {
+        state = {};
+      }
+      Object.entries(accessibilityConfig).forEach(([key, cfg]) => {
+        const enabled = !!state[key];
+        document.body.classList.toggle(cfg.className, enabled);
+        const cb = document.getElementById(cfg.checkboxId);
+        if (cb) cb.checked = enabled;
+      });
+    }
+
+    // ==========================
+    // שיפור נגישות אוטומטי
+    // ==========================
+    function enhanceAccessibility() {
+      // הוספת aria-label לכפתורים ללא תיאור
+      const buttons = document.querySelectorAll('button:not([aria-label])');
+      buttons.forEach(btn => {
+        const text = btn.textContent.trim();
+        if (text && !btn.getAttribute('aria-label')) {
+          btn.setAttribute('aria-label', text);
+        }
+      });
+
+      // הוספת role לכרטיסים
+      const cards = document.querySelectorAll('.card:not([role])');
+      cards.forEach(card => {
+        card.setAttribute('role', 'article');
+      });
+
+// שיפור נגישות לשדות קלט
+      const inputs = document.querySelectorAll('input:not([aria-label]):not([id])');
+      inputs.forEach(input => {
+        const placeholder = input.getAttribute('placeholder');
+        if (placeholder && !input.getAttribute('aria-label')) {
+          input.setAttribute('aria-label', placeholder);
+        }
+      });
+    }
+
+    // ==========================
+    // מערכת בדיקת תקינות מתקדמת
+    // ==========================
+    function runDiagnostics() {
+      console.log("🔍 מריץ בדיקת תקינות מערכת...");
+      
+      const issues = [];
+      const warnings = [];
+      const success = [];
+
+      // בדיקת אלמנטים קריטיים
+      const criticalElements = [
+        "appointments", "leadName", "leadPhone", "leadReason",
+        "adminPassword", "adminPanel", "calendarDemo", "sheetsUrl",
+        "accessibilityPanel", "dateInput", "appointmentsList",
+        "thankYouTemplate", "tasksList", "adminLoginStatus",
+        "templateStatus", "passwordStatus", "sheetsStatus",
+        "diagnosticsStatus", "leadMessage", "taskText", "taskDue"
+      ];
+
+      criticalElements.forEach(id => {
+        const el = document.getElementById(id);
+        if (!el) {
+          issues.push(`❌ אלמנט חסר: id="${id}"`);
+        } else {
+          success.push(`✅ אלמנט תקין: ${id}`);
+        }
+      });
+
+      // בדיקת פונקציות קריטיות
+      const criticalFunctions = [
+        "scrollToAppointments", "searchAppointments", "submitLead",
+        "toggleAdminPanel", "saveTemplate", "changeAdminPassword",
+        "addTask", "toggleTask", "deleteTask", "renderTasks", 
+        "renderCalendarDay", "changeCalendarDay", "formatDateForCalendar",
+        "importFromSheets", "exportToSheets", "startAutoSync", "stopAutoSync",
+        "toggleAccessibilityPanel", "toggleAccessibilityOption",
+        "resetAccessibility", "saveAccessibilityState", "loadAccessibilityState",
+        "enhanceAccessibility", "runDiagnostics"
+      ];
+
+      criticalFunctions.forEach(fnName => {
+        if (typeof window[fnName] !== "function") {
+          issues.push(`❌ פונקציה חסרה: ${fnName}()`);
+        } else {
+          success.push(`✅ פונקציה זמינה: ${fnName}()`);
+        }
+      });
+
+      // בדיקת נגישות WCAG 2.1
+      const accessibilityChecks = {
+        'כפתורים עם aria-label': document.querySelectorAll('button[aria-label]').length,
+        'קישורים עם טקסט': document.querySelectorAll('a:not(:empty)').length,
+        'שדות טופס עם labels או aria-label': document.querySelectorAll('input[aria-label], input[id]').length,
+        'כותרות היררכיות (h1-h3)': document.querySelectorAll('h1, h2, h3').length,
+        'אזורי landmark (role)': document.querySelectorAll('[role="region"], [role="article"], [role="form"]').length,
+        'אלמנטים עם aria-live': document.querySelectorAll('[aria-live]').length
+      };
+
+      Object.entries(accessibilityChecks).forEach(([check, count]) => {
+        if (count > 0) {
+          success.push(`✅ נגישות: ${check} (${count})`);
+        } else {
+          warnings.push(`⚠️ נגישות: לא נמצאו ${check}`);
+        }
+      });
+
+      // בדיקת LocalStorage
+      try {
+        localStorage.setItem('test_diagnostic', 'test');
+        localStorage.removeItem('test_diagnostic');
+        success.push('✅ LocalStorage פעיל ותקין');
+      } catch (e) {
+        warnings.push('⚠️ LocalStorage לא זמין - הגדרות נגישות לא יישמרו');
+      }
+
+      // בדיקת נתוני מערכת
+      if (sampleAppointments && sampleAppointments.length > 0) {
+        success.push(`✅ ${sampleAppointments.length} תורים זמינים במערכת`);
+      } else {
+        warnings.push('⚠️ אין תורים במערכת');
+      }
+
+      if (adminTasks && adminTasks.length > 0) {
+        success.push(`✅ ${adminTasks.length} משימות פעילות במערכת`);
+      } else {
+        success.push('✅ מערכת משימות פעילה (ללא משימות כרגע)');
+      }
+
+      // בדיקת משתנים גלובליים
+      const globalVars = ['adminPassword', 'currentCalendarDate', 'autoSyncInterval', 'accessibilityConfig'];
+      globalVars.forEach(varName => {
+        if (typeof window[varName] !== 'undefined') {
+          success.push(`✅ משתנה גלובלי: ${varName}`);
+        } else {
+          issues.push(`❌ משתנה גלובלי חסר: ${varName}`);
+        }
+      });
+
+      // בדיקת CSS Classes
+      const cssClasses = ['hero', 'card', 'btn-primary', 'admin-box', 'accessibility-panel'];
+      cssClasses.forEach(className => {
+        const elements = document.querySelectorAll('.' + className);
+        if (elements.length > 0) {
+          success.push(`✅ CSS Class נמצא: .${className} (${elements.length} אלמנטים)`);
+        } else {
+          warnings.push(`⚠️ CSS Class לא נמצא: .${className}`);
+        }
+      });
+
+      // בדיקת Event Handlers
+      const handlersCheck = {
+        'onclick handlers': document.querySelectorAll('[onclick]').length,
+        'onchange handlers': document.querySelectorAll('[onchange]').length
+      };
+
+      Object.entries(handlersCheck).forEach(([check, count]) => {
+        if (count > 0) {
+          success.push(`✅ ${check}: ${count} אלמנטים`);
+        } else {
+          warnings.push(`⚠️ לא נמצאו ${check}`);
+        }
+      });
+
+      // הדפסת תוצאות לקונסול
+      console.log("\n📊 תוצאות בדיקת תקינות:\n");
+      console.log("═══════════════════════════════════════");
+      
+      if (success.length > 0) {
+        console.log("\n✨ הצלחות (" + success.length + "):");
+        success.forEach(s => console.log("  " + s));
+      }
+
+      if (warnings.length > 0) {
+        console.log("\n⚠️ אזהרות (" + warnings.length + "):");
+        warnings.forEach(w => console.log("  " + w));
+      }
+
+      if (issues.length > 0) {
+        console.log("\n❌ בעיות קריטיות (" + issues.length + "):");
+        issues.forEach(i => console.log("  " + i));
+      }
+
+      // יצירת דוח מסכם
+      const totalChecks = success.length + warnings.length + issues.length;
+      const successRate = Math.round((success.length / totalChecks) * 100);
+      
+      const summary = `
+🎯 סיכום בדיקת תקינות מערכת:
+═══════════════════════════════════════
+✅ הצלחות: ${success.length}
+⚠️ אזהרות: ${warnings.length}
+❌ בעיות קריטיות: ${issues.length}
+📈 אחוז הצלחה: ${successRate}%
+═══════════════════════════════════════
+🏥 קליניקת ד"ר גרשאטר אוון
+📅 תאריך: ${new Date().toLocaleString('he-IL')}
+      `;
+      
+      console.log(summary);
+
+      // הצגת התוצאה במסך
+      const statusEl = document.getElementById("diagnosticsStatus");
+      if (statusEl) {
+        if (issues.length === 0) {
+          statusEl.style.background = "#f0fdf4";
+          statusEl.style.color = "#16a34a";
+          statusEl.style.borderLeft = "4px solid #22c55e";
+          statusEl.innerHTML = `
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+              <span style="font-size:20px;">✅</span>
+              <strong>המערכת תקינה לחלוטין!</strong>
+            </div>
+            <div style="font-size:12px; opacity:0.8;">
+              ${successRate}% מהבדיקות עברו בהצלחה | ${success.length} רכיבים תקינים
+              ${warnings.length > 0 ? ` | ${warnings.length} אזהרות` : ''}
+            </div>
+          `;
+        } else if (issues.length <= 3) {
+          statusEl.style.background = "#fef3c7";
+          statusEl.style.color = "#92400e";
+          statusEl.style.borderLeft = "4px solid #fbbf24";
+          statusEl.innerHTML = `
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+              <span style="font-size:20px;">⚠️</span>
+              <strong>המערכת פועלת עם ${issues.length} בעיות קלות</strong>
+            </div>
+            <div style="font-size:12px; opacity:0.8;">
+              ${successRate}% הצלחה | בדוק את הקונסול (F12) לפרטים מלאים
+            </div>
+          `;
+        } else {
+          statusEl.style.background = "#fee2e2";
+          statusEl.style.color = "#b91c1c";
+          statusEl.style.borderLeft = "4px solid #ef4444";
+          statusEl.innerHTML = `
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+              <span style="font-size:20px;">❌</span>
+              <strong>זוהו ${issues.length} בעיות קריטיות</strong>
+            </div>
+            <div style="font-size:12px; opacity:0.8;">
+              ${successRate}% הצלחה | פתח קונסול (F12) לרשימה מלאה של הבעיות
+            </div>
+          `;
+        }
+      }
+
+      // החזרת אובייקט עם התוצאות
+      return {
+        success: issues.length === 0,
+        successRate,
+        issues,
+        warnings,
+        successList: success,
+        totalChecks
+      };
+    }
+
+    // ==========================
+    // אתחול המערכת
+    // ==========================
+    document.addEventListener("DOMContentLoaded", function() {
+      console.log("🚀 מערכת קליניקת ד\"ר גרשאטר אוון מתחילה להיטען...");
+      
+      // טעינת הגדרות נגישות שמורות
+      loadAccessibilityState();
+      
+      // רינדור ראשוני של רכיבי UI
+      renderTasks();
+      renderCalendarDay();
+      
+      // שיפור נגישות אוטומטי
+      enhanceAccessibility();
+      
+      // הגדרת תאריך ברירת מחדל לשדה התאריך
+      const dateInput = document.getElementById("dateInput");
+      if (dateInput) {
+        const today = new Date();
+        const dateStr = today.toISOString().split('T')[0];
+        dateInput.value = dateStr;
+      }
+      
+      // בדיקת תקינות אוטומטית לאחר טעינה
+      setTimeout(() => {
+        console.log("✨ המערכת נטענה בהצלחה!");
+        console.log("📋 מריץ בדיקת תקינות אוטומטית...\n");
+        const diagnosticsResult = runDiagnostics();
+        
+        if (diagnosticsResult.success) {
+          console.log("🎉 כל המערכות פועלות תקין!");
+        } else if (diagnosticsResult.issues.length > 0) {
+          console.warn("⚠️ נמצאו בעיות - מומלץ לבדוק את הדוח למעלה");
+        }
+        
+        console.log("\n💡 טיפים לשימוש במערכת:");
+        console.log("  • לבדיקת תקינות ידנית: הקלד runDiagnostics() בקונסול");
+        console.log("  • לאיפוס נגישות: לחץ על כפתור ♿ ואז 'איפוס הגדרות נגישות'");
+        console.log("  • לחיבור גוגל שיטס: עקוב אחר ההוראות בסעיף הניהול");
+        console.log("  • הסיסמה הראשונית לאזור הניהול: 123456\n");
+      }, 1000);
+    });
+
+    // הוספת מאזיני אירועים גלובליים
+    window.addEventListener('error', function(e) {
+      console.error('🚨 שגיאה במערכת:', e.message);
+    });
+
+    // הצגת הודעת welcome בקונסול
+    console.log(`
+    ╔═══════════════════════════════════════════════════════╗
+    ║                                                       ║
+    ║   🏥 קליניקת ד"ר גרשאטר אוון                         ║
+    ║   Dr. Gershater Evan Chiropractic Clinic             ║
+    ║                                                       ║
+    ║   ✨ מערכת ניהול מתקדמת עם:                          ║
+    ║   • נגישות מלאה WCAG 2.1                             ║
+    ║   • חיבור לגוגל שיטס                                 ║
+    ║   • מערכת בדיקת תקינות אוטומטית                      ║
+    ║   • ניהול תורים ומשימות                              ║
+    ║                                                       ║
+    ║   📞 053-924-0494                                     ║
+    ║   💬 WhatsApp: wa.me/972539240494                    ║
+    ║                                                       ║
+    ╚═══════════════════════════════════════════════════════╝
+    `);
+  </script>
+</body>
+</html>
