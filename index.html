@@ -819,6 +819,63 @@ function doPost(e) {
   </div>
 
   <script>
+
+    // ==========================
+// Leads → Google Sheets (Web App)
+// ==========================
+// הדבק כאן את כתובת ה-Web App מה-Deploy (מסתיים ב /exec)
+const LEADS_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbzmetddPGvpMLmRkYPEtbyAJ35L6LR9ne36uTdexEFu9rARZCIgKeLcH3WKqDTnAFKc/exec";
+
+function getReferralFromUrl_() {
+  try {
+    const params = new URLSearchParams(window.location.search);
+    return (
+      params.get("ref") ||
+      params.get("utm_source") ||
+      params.get("utm_campaign") ||
+      params.get("utm_medium") ||
+      ""
+    );
+  } catch (e) {
+    return "";
+  }
+}
+
+async function postLeadToSheets_(payload) {
+  if (!LEADS_WEBAPP_URL || LEADS_WEBAPP_URL.includes("PASTE_YOUR_WEB_APP_URL_HERE")) {
+    throw new Error("חסר LEADS_WEBAPP_URL. הדבק את כתובת ה-Web App של Apps Script.");
+  }
+
+  // ניסיון CORS מלא
+  try {
+    const res = await fetch(LEADS_WEBAPP_URL, {
+      method: "POST",
+      mode: "cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+
+    const text = await res.text();
+    let json = {};
+    try { json = JSON.parse(text || "{}"); } catch (_) {}
+
+    if (!res.ok || json.success === false) {
+      throw new Error(json.error || "שגיאה בשליחת פרטים");
+    }
+    return { success: true };
+
+  } catch (err) {
+    // fallback no-cors (אם גוגל חוסם CORS)
+    await fetch(LEADS_WEBAPP_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+    return { success: true, note: "no-cors fallback" };
+  }
+}
+
     // ==========================
     // נתוני דמו ראשוניים
     // ==========================
@@ -873,28 +930,70 @@ function doPost(e) {
     }
 
     // ==========================
-    // לידים מטופלים חדשים
-    // ==========================
-    function submitLead() {
-      const name = document.getElementById("leadName").value.trim();
-      const phone = document.getElementById("leadPhone").value.trim();
-      const reason = document.getElementById("leadReason").value.trim();
-      const msg = document.getElementById("leadMessage");
+// לידים מטופלים חדשים (עם שליחה לגוגל שיטס)
+// ==========================
+async function submitLead() {
+  const nameEl = document.getElementById("leadName");
+  const phoneEl = document.getElementById("leadPhone");
+  const reasonEl = document.getElementById("leadReason");
+  const msg = document.getElementById("leadMessage");
 
-      if (!name || !phone) {
-        msg.style.color = "#b91c1c";
-        msg.textContent = "נא למלא לפחות שם וטלפון כדי שנוכל לחזור אליכם.";
-        return;
-      }
+  const name = (nameEl?.value || "").trim();
+  const phone = (phoneEl?.value || "").trim();
+  const reason = (reasonEl?.value || "").trim();
 
-      // כאן ניתן יהיה בעתיד לבצע שליחה ל-API אמיתי / וואטסאפ וכדומה
-      msg.style.color = "#15803d";
-      msg.textContent = "תודה רבה, הפרטים נקלטו. נחזור אליכם בהקדם עם הצעת תור אצל ד\"ר גרשאטר אוון.";
+  if (!name || !phone) {
+    msg.style.color = "#b91c1c";
+    msg.textContent = "נא למלא לפחות שם וטלפון כדי שנוכל לחזור אליכם.";
+    return;
+  }
 
-      document.getElementById("leadName").value = "";
-      document.getElementById("leadPhone").value = "";
-      document.getElementById("leadReason").value = "";
+  // הכפתור של "שליחת פרטים ותיאום שיחה"
+  const btn = document.querySelector('button[onclick="submitLead()"]');
+  if (btn) {
+    btn.disabled = true;
+    btn.style.opacity = "0.7";
+    btn.style.cursor = "not-allowed";
+  }
+
+  msg.style.color = "#f59e0b";
+  msg.textContent = "שולח פרטים...";
+
+  const payload = {
+    action: "addLead",
+    data: {
+      name,
+      phone,
+      reasonForVisit: reason,
+      referral: getReferralFromUrl_(),
+      requestedDate: "", // אין לך שדה כזה בטופס כרגע
+      response: ""       // ליד חדש: response ריק כדי שיצבע כתום
     }
+  };
+
+  try {
+    await postLeadToSheets_(payload);
+
+    msg.style.color = "#15803d";
+    msg.textContent = 'תודה רבה, הפרטים נקלטו. נחזור אליכם בהקדם עם הצעת תור אצל ד"ר גרשאטר אוון.';
+
+    if (nameEl) nameEl.value = "";
+    if (phoneEl) phoneEl.value = "";
+    if (reasonEl) reasonEl.value = "";
+
+  } catch (error) {
+    msg.style.color = "#b91c1c";
+    msg.textContent = "הייתה תקלה בשליחת הפרטים. נסו שוב בעוד רגע או שלחו הודעת וואטסאפ.";
+    console.error("Lead submit error:", error);
+  } finally {
+    if (btn) {
+      btn.disabled = false;
+      btn.style.opacity = "1";
+      btn.style.cursor = "pointer";
+    }
+  }
+}
+
 
     // ==========================
     // אזור ניהול – כניסה וסיסמאות
@@ -1617,4 +1716,5 @@ function doPost(e) {
     `);
   </script>
 </body>
+
 </html>
